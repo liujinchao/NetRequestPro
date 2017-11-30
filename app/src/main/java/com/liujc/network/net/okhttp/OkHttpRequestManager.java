@@ -1,7 +1,8 @@
 package com.liujc.network.net.okhttp;
 
+import com.android.httplib.okhttp.OkHttpUtils;
+import com.android.httplib.okhttp.callBack.RequestCallback;
 import com.liujc.network.net.common.IRequestManager;
-import com.liujc.network.net.common.RequestCallback;
 
 import java.util.Map;
 

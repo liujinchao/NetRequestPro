@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_load_more_progress_size">30dp</dimen>
+    <dimen name="common_load_more_padding">20dp</dimen>
+    <dimen name="common_loading_progress_size">35dp</dimen>
+    <dimen name="common_loading_text_margin">10dp</dimen>
+    <dimen name="common_loading_text_lines_spacing">5dp</dimen>
+
+    <!--标题栏-->
+    <dimen name="top_title_height">48dp</dimen>
+    <dimen name="top_title_word_size">18sp</dimen>
+    <dimen name="top_word_size_left_right">16sp</dimen>
+    <dimen name="title_bar_margin_left_right">10dp</dimen>
+</resources>

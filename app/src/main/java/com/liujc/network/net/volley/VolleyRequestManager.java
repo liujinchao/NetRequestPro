@@ -3,6 +3,7 @@ package com.liujc.network.net.volley;
 
 import android.text.TextUtils;
 
+import com.android.httplib.okhttp.callBack.RequestCallback;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -11,7 +12,6 @@ import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.liujc.network.NetApplication;
 import com.liujc.network.net.common.IRequestManager;
-import com.liujc.network.net.common.RequestCallback;
 
 import org.json.JSONException;
 import org.json.JSONObject;
