@@ -24,7 +24,7 @@ public class DownloadRetrofit {
         mRetrofit = new Retrofit.Builder()
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-//                .baseUrl(ApiConstants.getHost(HostType.SERVER_URL_OFFICE))
+                .baseUrl("http://localhost")
                 .build();
     }
 
