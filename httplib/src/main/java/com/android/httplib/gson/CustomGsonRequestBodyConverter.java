@@ -15,7 +15,7 @@ import okio.Buffer;
 import retrofit2.Converter;
 
 /**
- * 类名称：dkfjskfd
+ * 类名称：CustomGsonRequestBodyConverter
  * 创建者：Create by liujc
  * 创建时间：Create on 2017/11/10 23:59
  * 描述：TODO

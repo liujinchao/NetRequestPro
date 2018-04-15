@@ -38,6 +38,12 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="下载" />
+        <TextView
+            android:id="@+id/tv_download2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="版本检查" />
     </LinearLayout>
 
     <TextView

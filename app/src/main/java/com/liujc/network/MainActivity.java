@@ -6,26 +6,31 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.android.commonlibrary.base.BaseActivity;
+import com.android.commonlibrary.base.BaseCompatActivity;
 import com.android.commonlibrary.utils.ToastUitl;
 import com.android.httplib.basebean.ApiException;
 import com.android.httplib.download.DownloadObserver;
 import com.android.httplib.okhttp.callBack.StringRequestCallback;
 import com.android.httplib.retrofit.RetrofitManager;
+import com.android.httplib.update.UpdateAppBean;
+import com.android.httplib.update.UpdateAppManager;
+import com.android.httplib.update.listener.ExceptionHandler;
+import com.android.httplib.update.listener.IUpdateDialogFragmentListener;
+import com.android.httplib.update.utils.DrawableUtil;
 import com.liujc.network.net.common.IRequestManager;
 import com.liujc.network.net.common.RequestFactory;
 import com.liujc.network.net.okhttp.OkHttpRequestManager;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
-import okhttp3.ResponseBody;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseCompatActivity {
     private static final String TAG = "MainActivity";
     @BindView(R.id.show_msg)
     TextView showMsg;
+
+    private String mUpdateUrl = "https://raw.githubusercontent.com/WVector/AppUpdateDemo/master/json/json.txt";
 
     @Override
     protected int getContentViewLayoutID() {
@@ -34,6 +39,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initViewsAndEvents() {
+        DrawableUtil.setTextStrokeTheme((TextView) findViewById(R.id.tv_download2));
         showMsg.setText("hello,liujc");
     }
 
@@ -42,7 +48,7 @@ public class MainActivity extends BaseActivity {
         return false;
     }
 
-    @OnClick({R.id.tv_okhttp, R.id.tv_volley, R.id.tv_retrofit, R.id.tv_download})
+    @OnClick({R.id.tv_okhttp, R.id.tv_volley, R.id.tv_retrofit, R.id.tv_download, R.id.tv_download2})
     void onClick(View view){
         switch (view.getId()){
             case R.id.tv_okhttp:
@@ -85,6 +91,39 @@ public class MainActivity extends BaseActivity {
                         showMsg.setText("已下载"+ progress +"%");
                     }
                 });
+                break;
+            case  R.id.tv_download2:
+                UpdateAppBean updateAppBean = new UpdateAppBean();
+                updateAppBean.setUpdate(true)
+                        .setNewVersion("2.7.6")
+                        .setApkFileUrl("https://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/apps/official_app/Aihuishou_V2.7.6_%5Bofficial%5D_2_baidu01_sign.apk")
+                        .setUpdateLog("1，全新首页新体验。\r\n2，询价换机更方便。\r\n3，品牌列表排序更智能 不用担心找不到机型。\r\n4，修复已知bug。")
+                        .setApkSize("21M")
+                        .setNewMd5("B5A7C226C5D10C3734D2090282DF3FBD")
+                        .setForceUpdate(false);
+                new UpdateAppManager.Builder()
+                        //当前Activity
+                        .setActivity(this)
+                        //更新地址
+                        .handleException(new ExceptionHandler() {
+                            @Override
+                            public void onException(Exception e) {
+                             ToastUitl.showShort(e.getMessage());
+                            }
+                        })
+                        .dismissNotificationProgress()
+//                        // 监听更新提示框相关事件
+                        .setUpdateDialogFragmentListener(new IUpdateDialogFragmentListener() {
+                            @Override
+                            public void onUpdateNotifyDialogCancel(UpdateAppBean updateApp) {
+                                if(updateApp.isForceUpdate()){
+                                    // 处理强制更新，被用户cancel的情况
+                                }
+                                ToastUitl.showShort("取消更新");
+                            }
+                        })
+                        .build()
+                        .update(updateAppBean);
                 break;
         }
     }

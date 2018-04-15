@@ -1,6 +1,8 @@
 package com.android.httplib.download;
 
 
+import android.text.TextUtils;
+
 import com.android.httplib.HttpBaseContext;
 
 import java.io.File;
@@ -23,13 +25,17 @@ public class DownloadManager {
      * 保存文件
      *
      * @param response     ResponseBody
+     * @param targetPath
      * @param destFileName 文件名（包括文件后缀）
      * @return 返回
      * @throws IOException
      */
-    public File saveFile(ResponseBody response, final String destFileName, ProgressListener progressListener) throws IOException {
+    public File saveFile(ResponseBody response, String targetPath, final String destFileName, ProgressListener progressListener) throws IOException {
 
-        String destFileDir = HttpBaseContext.getContext().getExternalFilesDir(null) + File.separator;
+        String destFileDir = targetPath;
+        if (TextUtils.isEmpty(destFileDir)){
+            destFileDir = HttpBaseContext.getContext().getExternalFilesDir(null) + File.separator;
+        }
         long contentLength = response.contentLength();
         InputStream is = null;
         byte[] buf = new byte[2048];

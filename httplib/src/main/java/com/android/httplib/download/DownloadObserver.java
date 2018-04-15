@@ -21,7 +21,12 @@ import okhttp3.ResponseBody;
 public abstract class DownloadObserver extends BaseDownloadObserver {
 
     private String fileName;
+    private String targetPath;
 
+    public DownloadObserver(String fileName,String targetPath) {
+        this.fileName = fileName;
+        this.targetPath = targetPath;
+    }
     public DownloadObserver(String fileName) {
         this.fileName = fileName;
     }
@@ -45,7 +50,6 @@ public abstract class DownloadObserver extends BaseDownloadObserver {
      */
     protected abstract void onSuccess(long bytesRead, long contentLength, float progress, boolean done, String filePath);
 
-
     @Override
     protected void doOnError(ApiException errorMsg) {
         onError(errorMsg);
@@ -64,7 +68,7 @@ public abstract class DownloadObserver extends BaseDownloadObserver {
                     @Override
                     public void accept(@NonNull ResponseBody responseBody) throws Exception {
                         try {
-                            new DownloadManager().saveFile(responseBody, fileName, new ProgressListener() {
+                            new DownloadManager().saveFile(responseBody,targetPath, fileName, new ProgressListener() {
                                 @Override
                                 public void onResponseProgress(final long bytesRead, final long contentLength, final int progress, final boolean done, final String filePath) {
                                     Observable.just(progress)

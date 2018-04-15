@@ -17,7 +17,7 @@ import okhttp3.ResponseBody;
 import retrofit2.Converter;
 
 /**
- * 类名称：dsfdfsdf
+ * 类名称：CustomGsonResponseBodyConverter
  * 创建者：Create by liujc
  * 创建时间：Create on 2017/11/11 00:11
  * 描述：TODO
