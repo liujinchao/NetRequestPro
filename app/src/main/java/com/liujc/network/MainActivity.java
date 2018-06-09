@@ -8,10 +8,11 @@ import android.widget.TextView;
 
 import com.android.commonlibrary.base.BaseCompatActivity;
 import com.android.commonlibrary.utils.ToastUitl;
+import com.android.httplib.NetManager;
 import com.android.httplib.basebean.ApiException;
 import com.android.httplib.download.DownloadObserver;
 import com.android.httplib.okhttp.callBack.StringRequestCallback;
-import com.android.httplib.retrofit.RetrofitManager;
+import com.android.httplib.retrofit.RetrofitImpl;
 import com.android.httplib.update.UpdateAppBean;
 import com.android.httplib.update.UpdateAppManager;
 import com.android.httplib.update.listener.ExceptionHandler;
@@ -74,7 +75,7 @@ public class MainActivity extends BaseCompatActivity {
                 break;
             case R.id.tv_download:
                 ToastUitl.showShort("开始下载");
-                RetrofitManager.downloadFile("https://raw.githubusercontent.com/WVector/AppUpdateDemo/master/apk/app-debug.apk")
+                NetManager.downloadFile("https://raw.githubusercontent.com/WVector/AppUpdateDemo/master/apk/app-debug.apk")
                 .subscribe(new DownloadObserver("test.apk") {
                     @Override
                     protected void getDisposable(Disposable d) {

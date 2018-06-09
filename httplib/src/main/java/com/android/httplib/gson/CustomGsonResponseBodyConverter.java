@@ -2,6 +2,8 @@ package com.android.httplib.gson;
 
 import com.android.httplib.basebean.ApiException;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 
@@ -37,11 +39,18 @@ final class CustomGsonResponseBodyConverter<T> implements Converter<ResponseBody
     public T convert(ResponseBody value) throws IOException {
         String response = value.string();
         HttpStatus httpStatus = gson.fromJson(response, HttpStatus.class);
+        //过滤正确返回码操作，非正常返回码统一在error中处理
         if (!httpStatus.isSuccess()) {
             value.close();
             throw new ApiException(httpStatus.getCode(), httpStatus.getMessage());
         }
-
+        // 预防api返回结果中没有data字段，防止缺少字段导致解析报错，手动添加该字段
+        JsonParser parse = new JsonParser();
+        JsonObject json = (JsonObject) parse.parse(response);
+        if (!json.has("data")) {
+            json.add("data", null);
+        }
+        response = json.toString();
         MediaType contentType = value.contentType();
         Charset charset = contentType != null ? contentType.charset(UTF_8) : UTF_8;
         InputStream inputStream = new ByteArrayInputStream(response.getBytes());

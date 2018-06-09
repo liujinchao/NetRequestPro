@@ -2,6 +2,7 @@ package com.android.httplib.download;
 
 
 import com.android.httplib.baserx.RxUtil;
+import com.android.httplib.retrofit.IApiService;
 
 import io.reactivex.Observable;
 import okhttp3.ResponseBody;
@@ -15,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * 创建时间：Create on 2017/9/30
  * 描述：TODO
  */
-public class DownloadRetrofit {
+public class DownloadRetrofit implements IApiService{
 
     private static DownloadRetrofit instance;
     private Retrofit mRetrofit;
@@ -50,5 +51,10 @@ public class DownloadRetrofit {
                 .create(DownloadApi.class)
                 .downloadFile(fileUrl)
                 .compose(RxUtil.<ResponseBody>switchSchedulers());
+    }
+
+    @Override
+    public <T> T getApiService(Class<T> service) {
+        return mRetrofit.create(service);
     }
 }

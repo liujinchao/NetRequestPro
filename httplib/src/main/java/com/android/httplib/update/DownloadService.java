@@ -13,16 +13,15 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.Toast;
 
 
+import com.android.httplib.NetManager;
 import com.android.httplib.R;
 import com.android.httplib.basebean.ApiException;
 import com.android.httplib.download.DownloadObserver;
-import com.android.httplib.retrofit.RetrofitManager;
+import com.android.httplib.retrofit.RetrofitImpl;
 import com.android.httplib.update.utils.AppUpdateUtils;
-import com.android.httplib.update.utils.Md5Util;
 
 import java.io.File;
 
@@ -148,7 +147,7 @@ public class DownloadService extends Service {
         }
 
         FileCallback fileCallback = new FileDownloadCallBack(callback);
-        RetrofitManager.downloadFile(apkUrl)
+        NetManager.downloadFile(apkUrl)
                 .subscribe(new DownloadObserver(appName, targetPath) {
                     @Override
                     protected void getDisposable(Disposable d) {
