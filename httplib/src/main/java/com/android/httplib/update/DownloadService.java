@@ -28,11 +28,12 @@ import java.io.File;
 import io.reactivex.disposables.Disposable;
 
 /**
- * 类名称：DownloadService
- * 创建者：Create by liujc
- * 创建时间：Create on 2018/4/15 16:15
- * 描述：开启后台下载的服务
+ * DownloadService Create on 2018/4/15 16:15
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 开启后台下载的服务
  */
+
 public class DownloadService extends Service {
 
     private static final int NOTIFY_ID = 0;

@@ -4,12 +4,11 @@ import com.android.httplib.basebean.BaseResponse;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * 类名称：HttpStatus
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/11/10 23:38
- * 描述：TODO
+ * HttpStatus Create on 2017/11/10 23:38
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : TODO
  */
-
 public class HttpStatus {
     @SerializedName("code")
     private int mCode;

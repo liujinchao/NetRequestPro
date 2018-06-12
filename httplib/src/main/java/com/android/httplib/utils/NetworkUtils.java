@@ -14,6 +14,13 @@ import android.telephony.TelephonyManager;
  * 创建时间：Create on 2017/9/28
  * 描述：网络工具类
  */
+/**
+ * NetworkUtils Create on 2017/9/28 21:46
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 网络工具类
+ */
+
 public class NetworkUtils {
 
     private NetworkUtils() {

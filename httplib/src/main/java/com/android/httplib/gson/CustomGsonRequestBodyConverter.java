@@ -15,10 +15,10 @@ import okio.Buffer;
 import retrofit2.Converter;
 
 /**
- * 类名称：CustomGsonRequestBodyConverter
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/11/10 23:59
- * 描述：TODO
+ * CustomGsonRequestBodyConverter Create on 2017/11/10 23:59
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : TODO
  */
 
 final class CustomGsonRequestBodyConverter<T> implements Converter<T, RequestBody> {

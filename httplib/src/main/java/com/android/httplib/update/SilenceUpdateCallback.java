@@ -10,6 +10,13 @@ import java.io.File;
  * 创建时间：Create on 2018/4/15 16:36
  * 描述：静默下载的回调
  */
+/**
+ * SilenceUpdateCallback Create on 2018/4/15 16:36
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 静默下载的回调
+ */
+
 public class SilenceUpdateCallback extends UpdateCallback {
     @Override
     protected final void hasNewApp(final UpdateAppBean updateApp, final UpdateAppManager updateAppManager) {

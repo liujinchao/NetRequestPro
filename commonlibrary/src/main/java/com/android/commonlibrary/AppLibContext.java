@@ -2,7 +2,7 @@ package com.android.commonlibrary;
 
 import android.content.Context;
 
-import com.android.httplib.HttpBaseContext;
+import com.android.httplib.NetManager;
 
 /**
  * 类名称：AppContext
@@ -16,7 +16,7 @@ public class AppLibContext {
   public static void init(Context context) {
     if (mAppContext == null) {
       mAppContext = context.getApplicationContext();
-      HttpBaseContext.init(mAppContext);
+      NetManager.init(mAppContext);
     } else {
       throw new IllegalStateException("set context duplicate");
     }

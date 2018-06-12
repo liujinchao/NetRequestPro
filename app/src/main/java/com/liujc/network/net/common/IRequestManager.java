@@ -1,8 +1,6 @@
 package com.liujc.network.net.common;
 
 
-import com.android.httplib.okhttp.callBack.RequestCallback;
-
 import java.util.Map;
 
 public interface IRequestManager {

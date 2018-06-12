@@ -11,11 +11,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 类名称：LogUtil
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/28
- * 描述：log工具类
+ * LogUtil Create on 22017/9/28 21:46
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : log工具类
  */
+
 public class LogUtil {
     public static final String LOG_D = "D";
     public static final String LOG_I = "I";

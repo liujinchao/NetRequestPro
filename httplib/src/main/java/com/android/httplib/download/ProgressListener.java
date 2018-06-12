@@ -1,11 +1,12 @@
 package com.android.httplib.download;
 
 /**
- * 类名称：ProgressListener
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/30
- * 描述：TODO
+ * ProgressListener Create on 2017/9/30 21:33
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : TODO
  */
+
 public interface ProgressListener {
 
     /**

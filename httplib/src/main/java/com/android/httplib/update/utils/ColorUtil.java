@@ -6,10 +6,10 @@ import android.graphics.Color;
 import java.util.Random;
 
 /**
- * 类名称：ColorUtil
- * 创建者：Create by liujc
- * 创建时间：Create on 2018/4/15 16:11
- * 描述：色值处理工具类
+ * ColorUtil Create on 2018/4/15 16:11
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 色值处理工具类
  */
 public class ColorUtil {
     /**

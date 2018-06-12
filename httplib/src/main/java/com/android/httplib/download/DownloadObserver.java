@@ -13,11 +13,12 @@ import io.reactivex.schedulers.Schedulers;
 import okhttp3.ResponseBody;
 
 /**
- * 类名称：DownloadObserver
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/30
- * 描述：文件下载
+ * DownloadObserver Create on 2017/9/30 21:32
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 文件下载
  */
+
 public abstract class DownloadObserver extends BaseDownloadObserver {
 
     private String fileName;

@@ -1,10 +1,10 @@
 package com.android.httplib.update.listener;
 
 /**
- * 类名称：ExceptionHandlerHelper
- * 创建者：Create by liujc
- * 创建时间：Create on 2018/4/15 16:15
- * 描述：TODO
+ * ExceptionHandlerHelper Create on 2018/4/15 16:15
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : TODO
  */
 public class ExceptionHandlerHelper {
     private static  ExceptionHandler instance;

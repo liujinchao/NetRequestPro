@@ -11,10 +11,10 @@ import static com.android.httplib.update.utils.ColorUtil.getColorStateList;
 import static com.android.httplib.update.utils.ColorUtil.getRandomColor;
 
 /**
- * 类名称：DrawableUtil
- * 创建者：Create by liujc
- * 创建时间：Create on 2018/4/15 16:12
- * 描述：色值处理工具类
+ * DrawableUtil Create on 2018/4/15 16:12
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 色值处理工具类
  */
 public class DrawableUtil {
     private DrawableUtil() {

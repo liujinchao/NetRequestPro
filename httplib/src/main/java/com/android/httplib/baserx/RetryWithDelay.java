@@ -8,11 +8,12 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Function;
 
 /**
- * 类名称：RetryWithDelay
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/28 13:18
- * 描述：重试设置
+ * RetryWithDelay Create on 2017/9/28 13:18
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 重试设置
  */
+
 public class RetryWithDelay  implements Function<Observable<? extends Throwable>, ObservableSource<?>> {
 
     private static final int MAX_RETRIES = 3;

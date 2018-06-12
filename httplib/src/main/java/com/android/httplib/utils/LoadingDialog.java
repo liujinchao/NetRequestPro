@@ -5,11 +5,12 @@ import android.content.Context;
 import android.util.Log;
 
 /**
- * 类名称：LoadingDialog
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/28
- * 描述：TODO
+ * LoadingDialog Create on 2017/9/28 21:45
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 等待框
  */
+
 public class LoadingDialog {
 
     private static final String TAG = "LoadingDialog";

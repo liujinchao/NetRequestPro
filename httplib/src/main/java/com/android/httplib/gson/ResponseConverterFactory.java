@@ -13,10 +13,10 @@ import retrofit2.Converter;
 import retrofit2.Retrofit;
 
 /**
- * 类名称：dfsafdsf
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/11/10 23:48
- * 描述：TODO
+ * ResponseConverterFactory Create on 2017/11/10 23:48
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 自定义GsonConvert
  */
 
 public class ResponseConverterFactory extends Converter.Factory {

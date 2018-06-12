@@ -1,7 +1,6 @@
 package com.android.httplib.basebean;
 
 import com.android.httplib.baserx.ISubscriber;
-import com.android.httplib.utils.LogUtil;
 
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
@@ -12,11 +11,12 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 
 /**
- * 类名称：BaseObserver
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/29 10:26
- * 描述：TODO
+ * BaseObserver Create on 2017/9/29 10:26
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 正常restful api返回结果
  */
+
 public abstract class BaseObserver<T extends BaseResponse> implements Observer<T>, ISubscriber<T> {
 
     @Override
@@ -32,7 +32,6 @@ public abstract class BaseObserver<T extends BaseResponse> implements Observer<T
     @Override
     public void onError(@NonNull Throwable e) {
         String error = e.getMessage();
-        LogUtil.d(error);
         if (e instanceof ConnectException ||
                 e instanceof SocketTimeoutException ||
                 e instanceof TimeoutException) {

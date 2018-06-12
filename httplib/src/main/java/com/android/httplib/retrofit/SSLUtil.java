@@ -23,10 +23,10 @@ import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
 /**
- * 类名称：SSLUtil
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/30
- * 描述：证书工具类
+ * SSLUtil Create on 2017/9/30 21:39
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 证书工具类
  */
 
 public class SSLUtil {

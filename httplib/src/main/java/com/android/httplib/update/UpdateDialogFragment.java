@@ -43,11 +43,12 @@ import com.android.httplib.update.view.NumberProgressBar;
 import java.io.File;
 
 /**
- * 类名称：UpdateDialogFragment
- * 创建者：Create by liujc
- * 创建时间：Create on 2018/4/15 20:57
- * 描述：UpdateDialogFragment
- */
+  * UpdateDialogFragment Create on 2018/4/15 20:57
+  * @author :<a href="liujc_love@163.com">liujc</a>
+  * @version :1.0
+  * @Description : 版本升级弹框
+  */
+
 public class UpdateDialogFragment extends DialogFragment implements View.OnClickListener {
     public static final String TIPS = "请授权访问存储空间权限，否则App无法更新";
     public static boolean isShow = false;

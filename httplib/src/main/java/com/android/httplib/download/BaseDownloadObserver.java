@@ -9,11 +9,12 @@ import io.reactivex.annotations.NonNull;
 import okhttp3.ResponseBody;
 
 /**
- * 类名称：BaseDownloadObserver
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/30
- * 描述：TODO
+ * BaseDownloadObserver Create on 2017/9/30 21:30
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : TODO
  */
+
 public abstract class BaseDownloadObserver implements Observer<ResponseBody> {
 
     /**

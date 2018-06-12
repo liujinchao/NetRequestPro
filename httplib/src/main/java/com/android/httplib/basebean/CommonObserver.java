@@ -6,11 +6,12 @@ import android.app.Dialog;
 import io.reactivex.disposables.Disposable;
 
 /**
- * 类名称：CommonObserver
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/29
- * 描述：通用的Observer
+ * CommonObserver Create on 22017/9/29 21:25
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 通用的Observer
  */
+
 public abstract class CommonObserver<T extends BaseResponse> extends BaseObserver<T> {
 
     private Dialog mProgressDialog;

@@ -1,6 +1,6 @@
 package com.android.httplib.retrofit;
 
-import com.android.httplib.HttpBaseContext;
+import com.android.httplib.NetManager;
 import com.android.httplib.utils.LogUtil;
 
 import java.io.File;
@@ -16,13 +16,13 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 import okio.Buffer;
 
-
 /**
- * 类名称：OkHttp3Util
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/28
- * 描述：okHttp的配置
+ * OkHttp3Util Create on 2017/9/28 21:38
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : okHttp的配置
  */
+
 public class OkHttp3Util {
     //读超时长，单位：秒
     public static final int READ_TIME_OUT = 30;
@@ -49,7 +49,7 @@ public class OkHttp3Util {
     private static OkHttpClient initOkHttpClient() {
         LogInterceptor logInterceptor = new LogInterceptor();
 
-        File cacheFile = new File(HttpBaseContext.getContext().getCacheDir(), "cache");
+        File cacheFile = new File(NetManager.getContext().getCacheDir(), "cache");
         Cache cache = new Cache(cacheFile, 1024 * 1024 * 100); //100Mb
         //增加头部信息
         Interceptor headerInterceptor =  new Interceptor() {

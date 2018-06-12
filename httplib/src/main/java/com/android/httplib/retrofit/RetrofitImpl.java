@@ -9,11 +9,12 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 /**
- * 类名称：RetrofitImpl
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/28
- * 描述：retrofit集成0kHttp3的抽象基类
+ * RetrofitImpl Create on 2017/9/28 21:38
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : retrofit集成0kHttp3的抽象基类
  */
+
 public class RetrofitImpl implements IApiService{
 
     private Retrofit mRetrofit = null;

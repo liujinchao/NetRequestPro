@@ -19,12 +19,11 @@ import okhttp3.ResponseBody;
 import retrofit2.Converter;
 
 /**
- * 类名称：CustomGsonResponseBodyConverter
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/11/11 00:11
- * 描述：TODO
+ * CustomGsonResponseBodyConverter Create on 2017/11/11 00:11
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : TODO
  */
-
 final class CustomGsonResponseBodyConverter<T> implements Converter<ResponseBody, T> {
     private static final Charset UTF_8 = Charset.forName("UTF-8");
     private final Gson gson;

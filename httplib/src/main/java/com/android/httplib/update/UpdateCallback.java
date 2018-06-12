@@ -1,11 +1,12 @@
 package com.android.httplib.update;
 
 /**
- * 类名称：UpdateCallback
- * 创建者：Create by liujc
- * 创建时间：Create on 2018/4/15 16:37
- * 描述：版本更新管理器
+ * UpdateCallback Create on 2018/4/15 16:37
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 版本更新管理器
  */
+
 public class UpdateCallback {
 
 

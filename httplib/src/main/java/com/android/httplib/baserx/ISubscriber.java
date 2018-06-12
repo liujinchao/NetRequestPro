@@ -6,11 +6,12 @@ import com.android.httplib.basebean.BaseResponse;
 import io.reactivex.disposables.Disposable;
 
 /**
- * 类名称：ISubscriber
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/29 10:24
- * 描述：TODO
+ * ISubscriber Create on 2017/9/29 10:24
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : TODO
  */
+
 public interface ISubscriber<T extends BaseResponse> {
 
     void doOnSubscribe(Disposable d);

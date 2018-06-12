@@ -9,10 +9,10 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * 类名称：Md5Util
- * 创建者：Create by liujc
- * 创建时间：Create on 2018/4/15 16:12
- * 描述：工具类
+ * Md5Util Create on 2018/4/15 16:12
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 工具类
  */
 public class Md5Util {
     public static String getFileMD5(File file) {

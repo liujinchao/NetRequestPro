@@ -29,13 +29,13 @@ import com.android.httplib.update.listener.ExceptionHandlerHelper;
 import java.io.File;
 import java.util.List;
 
-
 /**
- * 类名称：AppUpdateUtils
- * 创建者：Create by liujc
- * 创建时间：Create on 2018/4/15 16:10
- * 描述：App相关工具类
+ * AppUpdateUtils Create on 2018/4/15 16:10
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : App升级相关工具类
  */
+
 public class AppUpdateUtils {
 
     public static final String IGNORE_VERSION = "ignore_version";

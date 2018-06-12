@@ -3,11 +3,12 @@ package com.android.httplib.basebean;
 import java.io.Serializable;
 
 /**
- * 类名称：BaseResponse
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/8/9
- * 描述：封装服务器返回数据
+ * BaseResponse Create on 2017/8/9 21:24
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 通过泛型的形式封装服务器返回数据
  */
+
 public class BaseResponse<T> implements Serializable {
     public int code;
     public String message;

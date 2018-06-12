@@ -7,11 +7,12 @@ import retrofit2.http.Streaming;
 import retrofit2.http.Url;
 
 /**
- * 类名称：DownloadApi
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/30
- * 描述：下载文件
+ * DownloadApi Create on 2017/9/30 21:30
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 默认下载文件api
  */
+
 public interface DownloadApi {
 
     @Streaming

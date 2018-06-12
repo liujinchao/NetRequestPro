@@ -1,10 +1,7 @@
 package com.android.httplib.download;
 
-
 import android.text.TextUtils;
-
-import com.android.httplib.HttpBaseContext;
-
+import com.android.httplib.NetManager;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,13 +10,13 @@ import java.io.InputStream;
 import okhttp3.ResponseBody;
 
 /**
- * 类名称：DownloadManager
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/30
- * 描述：保存下载的文件
+ * DownloadManager Create on 2017/9/30 21:31
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 保存下载的文件
  */
-public class DownloadManager {
 
+public class DownloadManager {
 
     /**
      * 保存文件
@@ -34,7 +31,7 @@ public class DownloadManager {
 
         String destFileDir = targetPath;
         if (TextUtils.isEmpty(destFileDir)){
-            destFileDir = HttpBaseContext.getContext().getExternalFilesDir(null) + File.separator;
+            destFileDir = NetManager.getContext().getExternalFilesDir(null) + File.separator;
         }
         long contentLength = response.contentLength();
         InputStream is = null;

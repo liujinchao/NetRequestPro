@@ -3,11 +3,12 @@ package com.android.httplib.update;
 import java.io.Serializable;
 
 /**
- * 类名称：UpdateAppBean
- * 创建者：Create by liujc
- * 创建时间：Create on 2018/4/15 16:36
- * 描述：TODO版本信息
+ * UpdateAppBean Create on 2018/4/15 16:36
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 版本信息
  */
+
 public class UpdateAppBean implements Serializable {
     private static final long serialVersionUID = 1L;
 

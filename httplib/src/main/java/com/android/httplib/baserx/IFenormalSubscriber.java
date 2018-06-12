@@ -1,4 +1,4 @@
-package com.liujc.httplib.baserx;
+package com.android.httplib.baserx;
 
 
 
@@ -7,11 +7,12 @@ import com.android.httplib.basebean.ApiException;
 import io.reactivex.disposables.Disposable;
 
 /**
- * 类名称：ISubscriber
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/29 10:24
- * 描述：TODO
+ * IFenormalSubscriber Create on 2017/9/29 10:24
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : TODO
  */
+
 public interface IFenormalSubscriber<T> {
 
     void doOnSubscribe(Disposable d);

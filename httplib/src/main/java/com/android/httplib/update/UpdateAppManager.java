@@ -21,11 +21,12 @@ import com.android.httplib.update.listener.IUpdateDialogFragmentListener;
 import com.android.httplib.update.utils.AppUpdateUtils;
 
 /**
- * 类名称：UpdateAppManager
- * 创建者：Create by liujc
- * 创建时间：Create on 2018/4/15 16:37
- * 描述：版本更新管理器
+ * UpdateAppManager Create on 2018/4/15 16:37
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : 版本更新管理器
  */
+
 public class UpdateAppManager {
     final static String INTENT_KEY = "update_dialog_values";
     final static String THEME_KEY = "theme_color";

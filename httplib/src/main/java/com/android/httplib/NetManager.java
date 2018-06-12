@@ -1,5 +1,7 @@
 package com.android.httplib;
 
+import android.content.Context;
+
 import com.android.httplib.download.DownloadRetrofit;
 import com.android.httplib.retrofit.RetrofitManager;
 
@@ -13,6 +15,23 @@ import okhttp3.ResponseBody;
  * 描述：TODO
  */
 public class NetManager {
+    public static Context mAppContext;
+
+    public static void init(Context context) {
+        if (mAppContext == null) {
+            mAppContext = context.getApplicationContext();
+        } else {
+            throw new IllegalStateException("set context duplicate");
+        }
+    }
+
+    public static Context getContext() {
+        if (mAppContext == null) {
+            throw new IllegalStateException("forget init HttpBaseContext?");
+        } else {
+            return mAppContext;
+        }
+    }
     /**
      * @param baseUrl  api的baseUrl
      * @param apiClass 对应service类型

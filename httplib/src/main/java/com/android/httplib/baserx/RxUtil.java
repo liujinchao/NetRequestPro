@@ -13,11 +13,12 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * 类名称：RxUtil
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/29 10:04
- * 描述：TODO
+ * RxUtil Create on 2017/9/29 10:04
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : TODO
  */
+
 public class RxUtil {
     public static <T> ObservableTransformer<T, T> io_main() {
         return new ObservableTransformer<T, T>() {

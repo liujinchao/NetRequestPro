@@ -11,11 +11,12 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * 类名称：DownloadRetrofit
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/30
- * 描述：TODO
+ * DownloadRetrofit Create on 2017/9/30 21:33
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : TODO
  */
+
 public class DownloadRetrofit implements IApiService{
 
     private static DownloadRetrofit instance;

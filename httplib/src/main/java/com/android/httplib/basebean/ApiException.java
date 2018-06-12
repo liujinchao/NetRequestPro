@@ -3,11 +3,12 @@ package com.android.httplib.basebean;
 import java.io.Serializable;
 
 /**
- * 类名称：ApiException
- * 创建者：Create by liujc
- * 创建时间：Create on 2017/9/28 12:36
- * 描述：TODO
+ * ApiException Create on 2017/9/28 12:36
+ * @author :<a href="liujc_love@163.com">liujc</a>
+ * @version :1.0
+ * @Description : TODO
  */
+
 public class ApiException extends RuntimeException implements Serializable{
     private int code;
     private String msg;
